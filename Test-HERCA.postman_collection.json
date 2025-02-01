@@ -1,0 +1,87 @@
+{
+	"info": {
+		"_postman_id": "353e667b-ecdd-4313-be55-798b250abc74",
+		"name": "Test-HERCA",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20480258"
+	},
+	"item": [
+		{
+			"name": "Get Commision",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8898/marketing/commission",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8898",
+					"path": [
+						"marketing",
+						"commission"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Payment Credit",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"penjualan_id\": 1,\r\n    \"payment_amount\": 3025000,\r\n    \"payment_method\": \"transfer\",\r\n    \"notes\": \"Pembayaran kedua\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8898/api/payments",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8898",
+					"path": [
+						"api",
+						"payments"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Payments credit",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8898/api/payments",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8898",
+					"path": [
+						"api",
+						"payments"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Payment Credit by Id Penjualan",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
